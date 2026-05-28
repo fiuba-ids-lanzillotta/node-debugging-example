@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Node: archivo actual",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Node: test del archivo actual",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": ["--test", "--test-name-pattern=.*"],
+            "program": "${file}",
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Node: todos los tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": ["--test"],
+            "program": "${workspaceFolder}/ejercicios",
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

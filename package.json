@@ -1,0 +1,14 @@
+{
+    "name": "node-debugging-example",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Ejemplos didacticos para debuggear codigo Node.js con el inspector de Node y VS Code.",
+    "scripts": {
+        "test": "node --test ejercicios/",
+        "test:carrito": "node --test ejercicios/carrito.test.js",
+        "test:async": "node --test ejercicios/async.test.js"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
