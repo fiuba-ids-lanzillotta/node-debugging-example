@@ -19,7 +19,6 @@ node-debugging-example/
 │   ├── carrito.js + carrito.test.js
 │   └── async.js   + async.test.js
 ├── package.json
-├── .vscode/launch.json             # F5 listo para usar
 ├── INSTRUCTOR.md                   # Soluciones y guion
 └── README.md
 ```
@@ -53,7 +52,8 @@ node demo/02_promise_rejection.js
 
 **Demos con debugger:**
 - Abrir el archivo en VS Code.
-- F5 (config "Node: archivo actual").
+- Presionar **F5** → seleccionar **"Node.js"** como debugger la primera vez.
+  VS Code lanza el archivo actual con el inspector enganchado.
 
 **Ejercicios** (correr los tests):
 
@@ -66,9 +66,14 @@ npm run test:async
 
 **Ejercicios con debugger:**
 - Abrir el archivo de tests (`carrito.test.js` o `async.test.js`).
-- F5 (config "Node: test del archivo actual"). Esto corre el archivo con
-  `node --test` y permite poner breakpoints tanto en los tests como en el
-  codigo de produccion.
+- Presionar **F5** → **"Node.js"**. Esto corre el archivo con el debugger
+  enganchado y permite poner breakpoints tanto en los tests como en el codigo
+  de produccion.
+- Alternativa por linea de comandos:
+  ```bash
+  node --inspect-brk --test ejercicios/carrito.test.js
+  ```
+  y conectar Chrome desde `chrome://inspect`.
 
 ## Conceptos cubiertos
 
